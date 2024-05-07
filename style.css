@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* 共通 */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+.btn{
+  background-color: green;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: white;
+  text-decoration: none;
+}
+h2{
+  text-align: center;
+
+  /* 追加 */
+  color: darkblue;
+}
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+
+/* ヘッダー */
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  align-items: center;
+}
+h1{
+  font-size: 0;
+}
+.splogo{
+  width: 116px;
+  height: 32px;
+  vertical-align: bottom;
+}
+.pclogo{
+  width: 284px;
+  height: 32px;
+  vertical-align: bottom;
+  display: none;
+}
+
+/* 内容 hero */
+.hero img{
+  width: 300px;
+  height: 312px;
+  margin-top: 64px;
+  vertical-align: bottom;
+}
+.hero{
+  background-color: skyblue;
+  background-image: url(bg.png);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  text-align: center;
+  padding-top: 64px;
+}
+.hero .btn{
+  margin-top: 64px;
+}
+
+/* 内容 */
+.features{
+  padding: 64px 0;
+}
+
+.feature{
+  margin-top: 64px;
+}
+.feature img{
+  width: 300px;
+  height: 200px;
+}
+.pic{
+  text-align: center;
+}
+.feature h3{
+  margin-top: 16px;
+}
+.feature p{
+  margin-top: 16px;
+}
+
+/* footer */
+footer{
+  background-color: #333;
+  text-align: center;
+  padding: 64px 0;
+}
+small{
+  color: white;
+  font-size: 14px;
+}
+
+/* large screen */
+@media (min-width: 600px){
+  .splogo{
+    display: none;
+  }
+  .pclogo{
+    display: inline;
+  }
+
+  .hero .container{
+    display: flex;
+    align-items: center;
+  }
+  .hero .container div{
+    flex: 1;
+  }
+  .hero img{
+    margin-top: 0;
+  }
+
+  .feature{
+    display: flex;
+    gap: 32px;
+  }
+  .pic{
+    width: 300px;
+  }
+  .desc{
+    flex: 1;
+  }
+  .reverced{
+    flex-direction: row-reverse;
+  }
+}
+
+/* 追加 */
+/* 共通 */
+h3{
+  color: darkblue;
+}
+
+/* ユーザーの声 */
+.uservoice{
+  background-color: skyblue;
+  padding: 50px 0 25px;
+  text-align: center
+}
+.voices{
+  margin: 70px 0 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: left;
+}
+.voice{
+  background-color: white;
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.name{
+  position: absolute;
+  display: flex;
+  left: 10px;
+  bottom: 10px;
+}
+.name p{
+  line-height: 40px;
+}
+.name img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #333 solid 1px;
+  margin-right: 10px;
+}
+
+.guide{
+  padding: 60px 0;
+  text-align: center;
+  background-color: rgb(110, 199, 234);
+  height: 250px;
+}
+.guide a{
+  margin-top: 60px;
+}
+
+/* 追加 アニメーション */
+.animate{
+  opacity: 0;
+  transition: opacity 0.8s , transform 0.5s;
+}
+
+.animate.sr{
+  transform: translateX(200px);
+}
+
+.animate.sl{
+  transform: translateX(-200px);
+}
+
+.animate.st1{
+  transform: translateY(100px);
+  transition-delay: .5s;
+}
+
+.animate.st2{
+  transform: translateY(100px);
+  transition-delay: 1s;
+}
+
+.animate.st3{
+  transform: translateY(100px);
+  transition-delay: 1.5s;
+}
+
+.animate.appear{
+  opacity: 1;
+  transform: none;
+}
