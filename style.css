@@ -100,6 +100,61 @@ small{
   font-size: 14px;
 }
 
+/* 追加 */
+/* 共通 */
+h3{
+  color: darkblue;
+}
+
+/* ユーザーの声 */
+.uservoice{
+  background-color: skyblue;
+  padding: 50px 0 30px;
+  text-align: center
+}
+.voices{
+  margin: 70px 10px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  text-align: left;
+}
+.voice{
+  background-color: white;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.name{
+  position: absolute;
+  display: flex;
+  left: 10px;
+  bottom: 10px;
+}
+.name p{
+  line-height: 40px;
+}
+.name img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #333 solid 1px;
+  margin-right: 10px;
+}
+
+.guide{
+  padding: 60px 0;
+  text-align: center;
+  background-color: rgb(110, 199, 234);
+  height: 250px;
+}
+.guide a{
+  margin-top: 60px;
+}
+
 /* large screen */
 @media (min-width: 600px){
   .splogo{
@@ -133,60 +188,20 @@ small{
   .reverced{
     flex-direction: row-reverse;
   }
-}
 
-/* 追加 */
-/* 共通 */
-h3{
-  color: darkblue;
-}
-
-/* ユーザーの声 */
-.uservoice{
-  background-color: skyblue;
-  padding: 50px 0 25px;
-  text-align: center
-}
-.voices{
-  margin: 70px 0 25px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  text-align: left;
-}
-.voice{
-  background-color: white;
-  width: 250px;
-  height: 200px;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative;
-}
-.name{
-  position: absolute;
-  display: flex;
-  left: 10px;
-  bottom: 10px;
-}
-.name p{
-  line-height: 40px;
-}
-.name img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: #333 solid 1px;
-  margin-right: 10px;
-}
-
-.guide{
-  padding: 60px 0;
-  text-align: center;
-  background-color: rgb(110, 199, 234);
-  height: 250px;
-}
-.guide a{
-  margin-top: 60px;
+  /* 追加 */
+  /* ユーザーの声 */
+  .uservoice{
+    padding: 50px 0 25px;
+  }
+  .voices{
+    margin: 70px 0 25px;
+  }
+  .voice{
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+  }
 }
 
 /* 追加 アニメーション */
